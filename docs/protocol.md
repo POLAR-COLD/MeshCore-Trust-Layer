@@ -282,5 +282,3 @@ All implementations MUST reject incompatible protocol versions unless explicitly
 This protocol is experimental and has not been audited.
 
 Do not use it for high-risk or production security applications without independent cryptographic review.
-
-```
