@@ -1,8 +1,8 @@
-# MeshTrust Protocol Specification v0.1
+# MeshCore Trust Layer Protocol Specification v0.1
 
 ## Overview
 
-MeshTrust is a decentralized security layer for MeshCore networks that provides:
+MeshCore Trust Layer is a decentralized security layer for MeshCore networks that provides:
 
 - Self-sovereign identity using Ed25519 keys
 - Web-of-Trust based public key verification
@@ -94,7 +94,7 @@ No scoring system is required in v0.1.
 
 ## Session Establishment
 
-MeshTrust uses ephemeral X25519 keys for each session.
+MeshCore Trust Layer uses ephemeral X25519 keys for each session.
 
 ### Step 1: Alice initiates session
 
@@ -171,7 +171,7 @@ This value is never transmitted.
 The shared secret is processed using HKDF-SHA256:
 
 ```
-SessionKey = HKDF(SharedSecret, context = "meshtrust-v0.1")
+SessionKey = HKDF(SharedSecret, context = "MeshCoreTrustLayer-v0.1")
 ```
 
 Result:
@@ -213,7 +213,7 @@ Alice ↔ encrypted messages ↔ Bob
 
 ## Security Properties
 
-MeshTrust v0.1 provides:
+MeshCore Trust Layer v0.1 provides:
 
 * Confidentiality (AES-256-GCM)
 * Integrity (AEAD authentication)
@@ -258,7 +258,7 @@ There is no global authority or global truth.
 ## Versioning
 
 ```
-meshtrust-protocol: v0.1
+MeshCoreTrustLayer-protocol: v0.1
 ```
 
 All implementations MUST reject incompatible protocol versions unless explicitly configured.
